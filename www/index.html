@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Theme Store</title>
+<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" href="css/theme-store.css" />
+</head>
+<body>
+<header class="top-bar">
+  <h1>Theme Store</h1>
+  <button onclick="window.location='settings.html'" aria-label="Settings">⋮</button>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h2>Featured Wallpaper</h2>
+    <div class="card large" onclick="openWallpaper('w1')">
+      <img src="assets/wallpapers/rose-gradient.jpg" alt="Featured" />
+      <div class="card-info"><h3>Abstract Rose</h3><span>4K • Trending</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Categories</h2>
+    <div class="category-grid">
+      <button onclick="filterCat('Nature')">Nature</button>
+      <button onclick="filterCat('Minimal')">Minimal</button>
+      <button onclick="filterCat('Abstract')">Abstract</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Trending Now</h2>
+    <div class="gallery">
+      <article class="thumb" onclick="openWallpaper('w2')"><img src="assets/wallpapers/blue-ink.jpg" alt="" /></article>
+      <article class="thumb" onclick="openWallpaper('w3')"><img src="assets/wallpapers/gold-velvet.jpg" alt="" /></article>
+      <article class="thumb" onclick="openWallpaper('w4')"><img src="assets/wallpapers/pink-soft.jpg" alt="" /></article>
+    </div>
+  </section>
+</main>
+
+<nav class="bottom-nav">
+  <a href="index.html" class="active">Home</a>
+  <a href="favorites.html">Favorites</a>
+</nav>
+</body>
+</html>
