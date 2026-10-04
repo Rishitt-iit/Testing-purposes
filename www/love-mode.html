@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Private</title>
+<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" href="css/love-mode.css" />
+</head>
+<body>
+<div id="app-lock" class="lock-overlay" style="display:none;">
+  <div class="lock-box">
+    <h2>Session Locked</h2>
+    <button onclick="reAuthenticate()">Unlock</button>
+  </div>
+</div>
+
+<div id="auth-screen" class="auth-overlay">
+  <div class="auth-card">
+    <h2>Private Access</h2>
+    <input id="auth-email" type="email" placeholder="Email" />
+    <input id="auth-pass" type="password" placeholder="Password" />
+    <button onclick="doAuth()">Continue</button>
+    <p>New here? <button onclick="doRegister()">Create Account</button></p>
+    <button onclick="exitLove()" class="exit-btn">Back to Theme Store</button>
+  </div>
+</div>
+
+<div class="messenger" id="messenger-panel" style="display:none;">
+  <aside class="contacts">
+    <header>
+      <h2>Private</h2>
+      <button onclick="exitLove()" aria-label="Exit">✕ Exit</button>
+    </header>
+    <input type="text" id="search-input" placeholder="Search user…" oninput="searchUsers(this.value)" />
+    <div id="conv-list" class="list"></div>
+  </aside>
+  
+  <main class="chat">
+    <header class="chat-header" id="chat-header">
+      <img id="chat-avatar" src="assets/icons/user.svg" alt="" />
+      <div><h3 id="chat-name">Select a conversation</h3><span id="chat-status" class="status">Offline</span></div>
+    </header>
+    <div id="msg-box" class="messages"></div>
+    <div class="composer">
+      <input id="msg-text" type="text" placeholder="Write a message…" onkeydown="if(event.key==='Enter')sendMsg()" />
+      <button onclick="sendMsg()">Send</button>
+    </div>
+  </main>
+</div>
+
+<!-- Firebase v9 compat CDN for direct use in static HTML -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging-compat.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/messenger.js"></script>
+<script src="js/notifications.js"></script>
+</body>
+</html>
