@@ -1,0 +1,25 @@
+:root{--bg:#0f0c15;--surface:#181323;--rose:#ff8fa3;--rose-soft:#ffb6c1;--text:#f0e6f0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);overflow:hidden;height:100vh;}
+.messenger{display:flex;height:100vh;}
+.contacts{width:320px;background:linear-gradient(180deg,#181323,#120b1c);border-right:1px solid #2a2035;}
+.contacts header{padding:1.2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #2a2035;}
+.contacts input{width:calc(100% - 2rem);margin:.8rem 1rem;padding:.6rem .8rem;border-radius:20px;border:none;background:#2a2035;color:#fff;}
+.list{overflow-y:auto;height:calc(100vh - 140px);}
+.conv-item{padding:1rem;cursor:pointer;border-bottom:1px solid #22152e;display:flex;gap:.7rem;align-items:center;}
+.conv-item:hover{background:#22152e;}
+.conv-item img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:2px solid var(--rose);}
+.chat{flex:1;display:flex;flex-direction:column;background:linear-gradient(180deg,#1a122e,#0f0c15);}
+.chat-header{padding:1rem;border-bottom:1px solid #2a2035;display:flex;gap:.8rem;align-items:center;}
+.chat-header h3{font-weight:500;}
+.status{font-size:.8rem;color:var(--rose-soft);display:block;}
+.messages{flex:1;overflow-y:auto;padding:1rem;}
+.bubble{max-width:70%;padding:.7rem 1rem;border-radius:18px;margin:.3rem 0;font-size:.95rem;line-height:1.3;box-shadow:0 2px 8px rgba(0,0,0,.3);}
+.bubble.sent{margin-left:auto;background:linear-gradient(135deg,var(--rose),var(--rose-soft));color:#2a0a18;}
+.bubble.received{background:#2a2035;color:#f0e6f0;}
+.composer{padding:.8rem;display:flex;gap:.5rem;border-top:1px solid #2a2035;}
+.composer input{flex:1;padding:.7rem 1rem;border-radius:20px;border:none;background:#2a2035;color:#fff;}
+.auth-overlay,.lock-overlay{position:fixed;inset:0;background:rgba(15,12,21,.95);display:flex;align-items:center;justify-content:center;z-index:50;}
+.auth-card,.lock-box{background:#181323;border:1px solid #2a2035;border-radius:24px;padding:2rem;width:90%;max-width:360px;text-align:center;}
+.auth-card input{width:100%;padding:.8rem;margin:.5rem 0;border-radius:12px;border:1px solid #2a2035;background:#0f0c15;color:#fff;}
+.exit-btn{position:absolute;top:1rem;right:1rem;background:transparent;color:#ff8fa3;border:none;font-size:1rem;cursor:pointer;}
