@@ -1,0 +1,17 @@
+/* Original design — clean, high-end, Realme-inspired but not copied */
+:root{--bg:#f8f6fc;--surface:#fff;--text:#1a1a2e;--accent:#ff6b9d;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.35;}
+.top-bar{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.2rem;background:linear-gradient(135deg,#ff6b9d 0%,#c084fc 100%);color:#fff;position:sticky;top:0;z-index:10;}
+.container{padding:1rem 1.2rem;max-width:720px;margin:0 auto;}
+.hero .card{border-radius:20px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.12);position:relative;}
+.card img{width:100%;display:block;height:220px;object-fit:cover;}
+.card-info{padding:1rem;background:linear-gradient(to top,rgba(0,0,0,.7),transparent);position:absolute;bottom:0;left:0;right:0;color:#fff;}
+.category-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:.75rem;margin:1rem 0;}
+.category-grid button{background:var(--surface);border:1px solid #ece8f4;border-radius:12px;padding:.7rem 0;font-weight:600;box-shadow:0 4px 10px rgba(0,0,0,.04);cursor:pointer;}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.75rem;}
+.thumb{border-radius:14px;overflow:hidden;box-shadow:0 6px 14px rgba(0,0,0,.06);cursor:pointer;}
+.thumb img{width:100%;height:120px;object-fit:cover;display:block;}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #ece8f4;display:flex;justify-content:space-around;padding:.6rem 0;font-weight:600;font-size:.9rem;z-index:20;}
+.bottom-nav a{color:#8a8596;text-decoration:none;}
+.bottom-nav a.active{color:var(--accent);}
