@@ -1,0 +1,9 @@
+{
+  "appId": "com.luxetheme.store",
+  "appName": "Theme Store",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "android": {
+    "allowMixedContent": true
+  }
+}
